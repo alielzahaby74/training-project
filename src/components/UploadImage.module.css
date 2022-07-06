@@ -1,0 +1,138 @@
+.uploadContainer {
+  border: solid 2px var(--mainShade);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.uploadContainer h1 {
+  /* font-family: var(--titleFont); */
+  font-size: 35px;
+
+  position: relative;
+
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 2px white;
+}
+
+.uploadContainer h1:before {
+  content: "";
+  position: absolute;
+
+  width: 80px;
+  height: 0px;
+  border: solid 0.5px white;
+
+  top: 55%;
+  transform: translateX(-115%);
+
+  box-shadow: 0px 0px 3px 1px white;
+}
+
+.uploadContainer h1:after {
+  content: "";
+  position: absolute;
+
+  width: 80px;
+  height: 0px;
+  border: solid 0.5px white;
+
+  top: 55%;
+  right: 0;
+  transform: translateX(115%);
+
+  box-shadow: 1px 0px 3px 1px white;
+}
+
+#actual-btn {
+  position: absolute;
+  z-index: -10;
+  visibility: hidden;
+}
+
+.uploadContainer label {
+  width: 26%;
+  height: 40px;
+
+  background-color: white;
+  border-radius: 6px;
+
+  color: var(--mainShade);
+  font-weight: 500;
+  font-size: 18px;
+
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--mainShade);
+
+  box-shadow: 0px 1px 5px 1px white;
+}
+
+/* label {
+    background-color: indigo;
+    color: white;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+  } */
+
+@media (max-width: 723px) {
+  .uploadContainer h1 {
+    font-size: 25px;
+  }
+  .uploadContainer h1::before,
+  .uploadContainer h1::after {
+    width: 60px;
+  }
+
+  .uploadContainer button {
+    width: 60%;
+  }
+
+  .uploadContainer label {
+    width: 60%;
+  }
+}
+
+.uploadedImageContainer {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.uploadedImage {
+    max-width: 80%;
+  width: 400px;
+  height: 400px;
+  margin-top: 25px;
+  overflow: hidden;
+  border-radius: 10px;
+  border: solid 2px var(--mainShade);
+  box-shadow: 0px 0px 10px 1px var(--mainShade), 0px 0px 10px 2px white;
+  background-color: white;
+}
+
+.uploadedImage img {
+  height: 100%;
+  width: 100%;
+}
+
+.uploadedImageContainer p{
+    text-align: center;
+    max-width: 60%;
+    overflow-wrap: normal;
+}
